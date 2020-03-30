@@ -9,19 +9,17 @@ namespace ListFromScratch
     public class ScratchList<T>
     {
         //member variable
-        int count;
+        private int count;
         public int Count
         {
             get
             {
                 return count;
             }
-            set
-            {
-                count = value;
-            }
+            
         }
-        int capacity;
+        
+        private int capacity;
         public int Capacity
         {
             get
@@ -33,7 +31,9 @@ namespace ListFromScratch
                 capacity = value;
             }
         }
-        private T[] items;        
+        private T[] items;   
+        
+        //make indexer here
         
         //constructor
         public ScratchList()
@@ -46,7 +46,28 @@ namespace ListFromScratch
 
         public void Add(T item)
         {
+            if(count < capacity)//there is room in array
+            {
+                item = items[count];
+                count++;
+            }
+            else if(count == capacity)//if there isnt room in the array
+            {
+                T[] tempArray = new T[capacity];
+                for (int i = 0; i < count; i++)
+                {
+                    tempArray[i] = items[i];
+                }
+                capacity = capacity * 2;
+                items = new T[capacity];
+                for (int i = 0; i < count; i++)
+                {
+                    items[i] = tempArray[i];
+                }
+                item = items[count];
+                count++;
 
+            }
         }
     }
 }

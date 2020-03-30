@@ -103,6 +103,29 @@ namespace ScratchListTest
             Assert.AreEqual(expected, actual);
         }
 
+        public void Add_10PositiveInt_CapacityIncreasto16()
+        {
+            //arrange
+            ScratchList<int> testList = new ScratchList<int>();
+            int expected = 16;
+            int actual;
+
+            //act
+            testList.Add(2);
+            testList.Add(33);
+            testList.Add(7);
+            testList.Add(12);
+            testList.Add(3);
+            testList.Add(5);
+            testList.Add(100);
+            testList.Add(79);
+            testList.Add(142);
+            testList.Add(32);
+            actual = testList.Capacity;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
