@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListFromScratch", "ListFromScratch\ListFromScratch.csproj", "{1C83C312-BE19-475A-8056-7317CE64976F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScratchListTest", "ScratchListTest\ScratchListTest.csproj", "{991148AA-F36E-415D-91B9-280F763892AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C83C312-BE19-475A-8056-7317CE64976F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C83C312-BE19-475A-8056-7317CE64976F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C83C312-BE19-475A-8056-7317CE64976F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C83C312-BE19-475A-8056-7317CE64976F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991148AA-F36E-415D-91B9-280F763892AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991148AA-F36E-415D-91B9-280F763892AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991148AA-F36E-415D-91B9-280F763892AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991148AA-F36E-415D-91B9-280F763892AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7862418D-7F26-4C60-882F-8548DBE307E7}
+	EndGlobalSection
+EndGlobal
