@@ -12,6 +12,7 @@ namespace ScratchListTest
         {
             //arrange
             ScratchList<int> testList = new ScratchList<int>();
+            
             int item1 = 34;
             int expected = 1;
             int actual;

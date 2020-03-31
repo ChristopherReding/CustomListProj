@@ -46,17 +46,21 @@ namespace ListFromScratch
                 
             }
         }
-        private T[] items;   
-                
+        
+        private T[] items;                
         public T this[int index] //indexer
         {
             get
             {
+                if (index < 0 || index >= items.Length)
+                {
+                    throw new IndexOutOfRangeException("Index out of range");
+                }
                 return items[index];
             }
             set
             {
-                if(index < 0 || index >= items.Length)
+                if (index < 0 || index >= items.Length)
                 {
                     throw new IndexOutOfRangeException("Index out of range");
                 }
@@ -76,7 +80,7 @@ namespace ListFromScratch
         {
             if(count < capacity)//there is room in array
             {
-                item = items[count];
+                items[count] = item;
                 count++;
             }
             else if(count == capacity)//if there isnt room in the array
@@ -92,13 +96,41 @@ namespace ListFromScratch
                 {
                     items[i] = tempArray[i];
                 }
-                item = items[count];
+                items[count] = item;
                 count++;
 
             }
         }
+
         public void Remove(T item)
         {
+            T[] tempArray = new T[capacity];              
+            int indexOfRemovedItem = count + 1;
+            bool itemIsInList = false;
+            for (int i = 0; i < count; i++)
+            {
+                if (item.Equals(items[i]))
+                {
+                    indexOfRemovedItem = i;
+                    itemIsInList = true;
+                    break;
+                }
+                tempArray[i] = items[i]; 
+            }
+            for (int i = indexOfRemovedItem + 1; i < count; i++)
+            {
+                tempArray[i-1] = items[i];
+            }            
+            if(itemIsInList == true)
+            {                
+                count--;
+            }
+            for (int i = 0; i < count; i++)
+            {
+                items[i] = tempArray[i];
+            }
+            
+
 
         }
     }
