@@ -28,13 +28,41 @@ namespace ListFromScratch
             }
             set
             {
-                capacity = value;
+                if(Capacity >= count)
+                {                    
+                    T[] tempArray = new T[capacity];
+                    for (int i = 0; i < count; i++)
+                    {
+                        tempArray[i] = items[i];
+                    }                    
+                    capacity = value;
+                    items = new T[capacity];
+                    for (int i = 0; i < count; i++)
+                    {
+                        items[i] = tempArray[i];
+                    }
+                }
+               
+                
             }
         }
         private T[] items;   
-        
-        //make indexer here
-        
+                
+        public T this[int index] //indexer
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                if(index < 0 || index >= items.Length)
+                {
+                    throw new IndexOutOfRangeException("Index out of range");
+                }
+                items[index] = value;
+            }
+        }
         //constructor
         public ScratchList()
         {
@@ -68,6 +96,10 @@ namespace ListFromScratch
                 count++;
 
             }
+        }
+        public void Remove(T item)
+        {
+
         }
     }
 }
