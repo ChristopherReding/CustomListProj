@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ListFromScratch
 {
-    public class ScratchList<T>
+    public class ScratchList<T> : IEnumerable
     {
         //member variable
         private int count;
@@ -48,7 +49,7 @@ namespace ListFromScratch
         }
         
         private T[] items;                
-        public T this[int index] //indexer
+        public T this[int index] 
         {
             get
             {
@@ -67,6 +68,14 @@ namespace ListFromScratch
                 items[index] = value;
             }
         }
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return items[i];
+            }
+        }
+
         //constructor
         public ScratchList()
         {
