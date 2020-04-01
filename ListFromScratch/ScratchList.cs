@@ -147,7 +147,23 @@ namespace ListFromScratch
         }
 
         public static ScratchList<T> operator+ (ScratchList<T> list1, ScratchList<T> list2)
-        {
+        {            
+            
+            if(list1.GetType() != list2.GetType())
+            {
+                throw new IndexOutOfRangeException("Cannot add lists of different data type");
+            }
+
+            ScratchList<T> summedList = new ScratchList<T>();
+            for (int i = 0; i < list1.count; i++)
+            {
+                summedList.Add(list1[i]);
+            }
+            for (int i = 0; i < list2.count; i++)
+            {
+                summedList.Add(list2[i]);
+            }
+            return summedList;
 
         }
     }
