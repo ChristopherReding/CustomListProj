@@ -11,6 +11,7 @@ namespace ListFromScratch
         static void Main(string[] args)
         {
             ScratchList<int> scratchList = new ScratchList<int>();
+
         }
     }
 }

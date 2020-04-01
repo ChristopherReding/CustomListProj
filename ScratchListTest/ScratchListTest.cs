@@ -260,6 +260,216 @@ namespace ScratchListTest
             //assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Remove_UserInputNotInList_ListRemainsUnchanged()
+        {
+            //arrange
+            ScratchList<int> testList = new ScratchList<int>();
+            int actual;
+            int expected = 6;
+            testList.Add(2);
+            testList.Add(33);
+            testList.Add(7);
+            testList.Add(12);
+            testList.Add(7);
+            testList.Add(3);
 
+            //act
+            testList.Remove(5);
+            actual = testList.Count;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ToString_Add3IntsToList_OutputIs2337()
+        {
+            //arrange
+            ScratchList<int> testList = new ScratchList<int>();
+            string actual;
+            string expected = "2337";
+            testList.Add(2);
+            testList.Add(33);
+            testList.Add(7);
+
+            //act
+            actual =  testList.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ToString_Add3DoublesToList_OutputIs2337()
+        {
+            //arrange
+            ScratchList<double> testList = new ScratchList<double>();
+            string actual;
+            string expected = "2337";
+            testList.Add(2);
+            testList.Add(33);
+            testList.Add(7);
+
+            //act
+            actual = testList.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ToString_Add3StringsToList_OutputIsSeeSpotRun()
+        {
+            //arrange
+            ScratchList<string> testList = new ScratchList<string>();
+            string actual;
+            string expected = "SeeSpotRun";
+            testList.Add("See");
+            testList.Add("Spot");
+            testList.Add("Run");
+
+            //act
+            actual = testList.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void PlusOverload_AddListOf3IntsAndListOf2Ints_CountIs5()
+        {
+            //arrange            
+            ScratchList<int> testList1 = new ScratchList<int>();            
+            ScratchList<int> testList2 = new ScratchList<int>();
+            
+            
+            int actual;
+            int expected = 5;
+            testList1.Add(3);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(12);
+            testList2.Add(57);
+
+            //act
+            ScratchList<int> sumList = testList1 + testList2;
+            actual = sumList.Count;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOverload_AddListOf3IntsAndListOf2Ints_Capacityis8()
+        {
+            //arrange            
+            ScratchList<int> testList1 = new ScratchList<int>();
+            ScratchList<int> testList2 = new ScratchList<int>();
+
+
+            int actual;
+            int expected = 8;
+            testList1.Add(3);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(12);
+            testList2.Add(57);
+
+            //act
+            ScratchList<int> sumList = testList1 + testList2;
+            actual = sumList.Capacity;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOverload_AddListOf3IntsAndListOf2Ints_ValueIndex0Is3()
+        {
+            //arrange            
+            ScratchList<int> testList1 = new ScratchList<int>();
+            ScratchList<int> testList2 = new ScratchList<int>();
+
+
+            int actual;
+            int expected = 3;
+            testList1.Add(3);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(12);
+            testList2.Add(57);
+
+            //act
+            ScratchList<int> sumList = testList1 + testList2;
+            actual = sumList[0];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        public void PlusOverload_AddListOf3IntsAndListOf2Ints_ValueIndex2Is8()
+        {
+            //arrange            
+            ScratchList<int> testList1 = new ScratchList<int>();
+            ScratchList<int> testList2 = new ScratchList<int>();
+
+
+            int actual;
+            int expected = 8;
+            testList1.Add(3);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(12);
+            testList2.Add(57);
+
+            //act
+            ScratchList<int> sumList = testList1 + testList2;
+            actual = sumList[2];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOverload_AddListOf3IntsAndListOf2Ints_ValueIndex3Is12()
+        {
+            //arrange            
+            ScratchList<int> testList1 = new ScratchList<int>();
+            ScratchList<int> testList2 = new ScratchList<int>();
+
+
+            int actual;
+            int expected = 12;
+            testList1.Add(3);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(12);
+            testList2.Add(57);
+
+            //act
+            ScratchList<int> sumList = testList1 + testList2;
+            actual = sumList[3];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void PlusOverload_AddListOf3IntsAndListOf2Ints_ValueIndex4Is57()
+        {
+            //arrange            
+            ScratchList<int> testList1 = new ScratchList<int>();
+            ScratchList<int> testList2 = new ScratchList<int>();
+
+
+            int actual;
+            int expected = 57;
+            testList1.Add(3);
+            testList1.Add(4);
+            testList1.Add(8);
+            testList2.Add(12);
+            testList2.Add(57);
+
+            //act
+            ScratchList<int> sumList = testList1 + testList2;
+            actual = sumList[4];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

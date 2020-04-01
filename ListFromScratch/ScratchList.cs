@@ -133,5 +133,22 @@ namespace ListFromScratch
 
 
         }
+
+        public override string ToString()
+        {
+            string listAsString = null;
+            for (int i = 0; i < count; i++)
+            {
+                string tempString = Convert.ToString(items[i]);
+                listAsString = listAsString + tempString;
+            }
+
+            return listAsString; 
+        }
+
+        public static ScratchList<T> operator+ (ScratchList<T> list1, ScratchList<T> list2)
+        {
+
+        }
     }
 }
