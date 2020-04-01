@@ -175,5 +175,19 @@ namespace ListFromScratch
             return summedList;
 
         }
+        public static ScratchList<T> operator- (ScratchList<T> list1, ScratchList<T> list2)
+        {
+            if (list1.GetType() != list2.GetType())
+            {
+                throw new IndexOutOfRangeException("Cannot subtract lists of different data type");
+            }
+            
+            for (int i = 0; i < list2.count; i++)
+            {
+                list1.Remove(list2[i]);
+            }
+            return list1;
+        }
+
     }
 }
