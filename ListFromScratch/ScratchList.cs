@@ -188,6 +188,9 @@ namespace ListFromScratch
             }
             return list1;
         }
+        public ScratchList<T> Zip(ScratchList<T> list)
+        {
 
+        }
     }
 }

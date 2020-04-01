@@ -639,5 +639,339 @@ namespace ScratchListTest
             //assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Zip_Zip2EqualSizedLists_Countis6()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();            
+            int actual;
+            int expected = 6;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList.Count;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2EqualSizedLists_Index0Is0()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 0;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[0];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2EqualSizedLists_Index1Is1()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 1;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[1];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2EqualSizedLists_Index2Is2()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 2;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[2];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2EqualSizedLists_Index3Is3()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 3;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[3];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2BigvSmallLists_Index5Is5()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 5;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list1.Add(6);
+            list1.Add(7);
+            list1.Add(8);            
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[5];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2BigvSmallLists_Index6Is6()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 6;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list1.Add(6);
+            list1.Add(7);
+            list1.Add(8);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[6];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2BigvSmallLists_Index7Is7()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 7;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list1.Add(6);
+            list1.Add(7);
+            list1.Add(8);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[7];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2BigvSmallLists_Index8Is8()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 8;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list1.Add(6);
+            list1.Add(7);
+            list1.Add(8);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[8];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2SmallvBigLists_Index5Is5()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 5;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);            
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+            list2.Add(6);
+            list2.Add(7);
+            list2.Add(8);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[5];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2SmallvBigLists_Index6Is6()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 6;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+            list2.Add(6);
+            list2.Add(7);
+            list2.Add(8);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[6];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2SmallvBigLists_Index7Is7()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 6;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+            list2.Add(6);
+            list2.Add(7);
+            list2.Add(8);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[6];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2SmallvBigLists_Index8Is8()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 8;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+            list2.Add(6);
+            list2.Add(7);
+            list2.Add(8);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList[8];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Zip_Zip2SmallvBigLists_Countis9()
+        {
+            //arrange
+            ScratchList<int> list1 = new ScratchList<int>();
+            ScratchList<int> list2 = new ScratchList<int>();
+            int actual;
+            int expected = 9;
+            list1.Add(0);
+            list1.Add(2);
+            list1.Add(4);
+            list2.Add(1);
+            list2.Add(3);
+            list2.Add(5);
+            list2.Add(6);
+            list2.Add(7);
+            list2.Add(8);
+
+            //act
+            ScratchList<int> zippedList = list1.Zip(list2);
+            actual = zippedList.Count;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
