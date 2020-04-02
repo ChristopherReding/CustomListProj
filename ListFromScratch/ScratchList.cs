@@ -87,12 +87,12 @@ namespace ListFromScratch
 
         public void Add(T item)
         {
-            if(count < capacity)//there is room in array
+            if(count < capacity)
             {
                 items[count] = item;
                 count++;
             }
-            else if(count == capacity)//if there isnt room in the array
+            else if(count == capacity)
             {
                 T[] tempArray = new T[capacity];
                 for (int i = 0; i < count; i++)
@@ -188,6 +188,7 @@ namespace ListFromScratch
             }
             return list1;
         }
+        //For doc regarding the -operator overload, there is a Word document called -operator overload doc in the CustomListProj folder
         public ScratchList<T> Zip(ScratchList<T> list1, ScratchList<T> list2)
         {
             if (list1.GetType() != list2.GetType())

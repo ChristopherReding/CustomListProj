@@ -9,8 +9,9 @@ namespace ListFromScratch
     class Program
     {
         static void Main(string[] args)
-        {
-            ScratchList<int> scratchList = new ScratchList<int>();
+        {         
+            
+
 
         }
     }
