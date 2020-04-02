@@ -188,9 +188,34 @@ namespace ListFromScratch
             }
             return list1;
         }
-        public ScratchList<T> Zip(ScratchList<T> list)
+        public ScratchList<T> Zip(ScratchList<T> list1, ScratchList<T> list2)
         {
+            if (list1.GetType() != list2.GetType())
+            {
+                throw new IndexOutOfRangeException("Cannot zip lists of different data type");
+            }
 
+            ScratchList<T> newList = new ScratchList<T>();
+            for (int i = 0; i < list1.count && i < list2.count; i++)
+            {                
+                newList.Add(list1[i]);
+                newList.Add(list2[i]);
+            }
+            if (list1.count > list2.count)
+            {
+                for (int i = list2.count; i < list1.count; i++)
+                {
+                    newList.Add(list1[i]);
+                }                
+            }
+            else if (list1.count < list2.count)
+            {
+                for (int i = list1.count; i < list2.count; i++)
+                {
+                    newList.Add(list2[i]);
+                }            
+            }
+            return newList;
         }
     }
 }

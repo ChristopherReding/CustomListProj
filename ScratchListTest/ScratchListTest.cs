@@ -655,7 +655,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList.Count;
             //assert
             Assert.AreEqual(expected, actual);
@@ -676,7 +676,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[0];
 
             //assert
@@ -698,7 +698,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[1];
 
             //assert
@@ -720,7 +720,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[2];
 
             //assert
@@ -742,7 +742,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[3];
 
             //assert
@@ -767,7 +767,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[5];
 
             //assert
@@ -792,7 +792,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[6];
 
             //assert
@@ -817,7 +817,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[7];
 
             //assert
@@ -842,7 +842,7 @@ namespace ScratchListTest
             list2.Add(5);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[8];
 
             //assert
@@ -867,7 +867,7 @@ namespace ScratchListTest
             list2.Add(8);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[5];
 
             //assert
@@ -892,7 +892,7 @@ namespace ScratchListTest
             list2.Add(8);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[6];
 
             //assert
@@ -917,7 +917,7 @@ namespace ScratchListTest
             list2.Add(8);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList[6];
 
             //assert
@@ -942,7 +942,7 @@ namespace ScratchListTest
             list2.Add(8);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2); ;
             actual = zippedList[8];
 
             //assert
@@ -967,7 +967,7 @@ namespace ScratchListTest
             list2.Add(8);
 
             //act
-            ScratchList<int> zippedList = list1.Zip(list2);
+            ScratchList<int> zippedList = list1.Zip(list1, list2);
             actual = zippedList.Count;
 
             //assert
